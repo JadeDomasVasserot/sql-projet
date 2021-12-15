@@ -1,0 +1,26 @@
+Enoncés pour les modifications de la structure de la base de données 
+
+Création d'une table avec tous les films loués ou achetés avant 2015.
+Création/Ajout d'une colonne dans la table movie, book, show --> date_sortie
+Changement des noms de colonnes ref_products dans book, movie, show en ref_book, ref_movie, ref_show
+Ajout de nouvelles contraintes : 
+ALTER TABLE client ADD CONSTRAINT client_check CHECK (len(username)>=2);
+
+ALTER TABLE entreprise ADD CONSTRAINT entreprise_ck CHECK (len(name)>2);
+ALTER TABLE entreprise ADD CONSTRAINT entreprise_cp_ck CHECK (len(cp)=5);
+
+Suppression de la colonne adresse dans entreprise
+
+Enoncés pour les vues : 
+
+1ere : vue_book --> où dans la table product on ne voit que les book
+2eme : vue_movie --> où dans la table product on ne voit que les movie
+3eme : vue_show --> où dans la table product on ne voit que les show
+4eme : vue_genre_action --> où on ne voit que action dans la table genre
+5eme : vue_genre_thriller --> où on ne voit que thriller dans la table genre
+6eme : vue_genre_classic --> où on ne voit que classic dans la table genre
+7eme : vue_genre_Science-fiction --> où l'on ne voit que Science-Fictions dans la table genre
+8eme : vue_client --> où le client voit que ce qu'il lui appartient, et ce qu'il peut voir
+9eme : vue_buy --> le client voit toutes les informations de ses produits achetés
+10ème : vue_rent --> le client voit toutes les informations de ses produits loués.
+
